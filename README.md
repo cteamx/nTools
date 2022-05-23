@@ -60,3 +60,7 @@
 
 - 官网：https://n.tools
 - Chrome 商店：[点击下载](https://chrome.google.com/webstore/detail/ntools-%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E7%AE%B1/mlihpcccijmdmkejmmjinppkjhdkfpnd?hl=zh-CN)
+
+## 参考
+
+借鉴了 Alfred、uTools、Omni 等系列软件
