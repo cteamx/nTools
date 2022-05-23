@@ -1,0 +1,245 @@
+@media (prefers-color-scheme: dark) {
+    .ntools-model {
+        --background: #1e2128;
+        --ntools-logo: #c3c3c3;
+        --ntools-input-border: #34373d;
+        --ntools-input-color: #378dff;
+        --ntools-input-caret-color: #378dff;
+        --ntools-input-placeholder: #3b3d42;
+        --ntools-data-list-border: #23262b;
+        --ntools-data-list-enter-color: #9a9a9a;
+        --ntools-kbd-enter: #378dff;
+        --ntools-item-active-background: rgb(25 27 32);
+        --ntools-item-active-border: #378dff;
+        --ntools-data-list-title: #d2d2d2;
+        --ntools-data-list-desc: #868686;
+        --ntools-footer: #34373d;
+        --ntools-kbd-background: #ffffff;
+        --ntools-kbd-color: #000;
+        --ntools-footer-left: #51565b;
+        --ntools-footer-right: #51565b;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .ntools-model {
+        --background: #f9fcff;
+        --ntools-input-border: #ebebeb;
+        --ntools-input-color: #0328ff;
+        --ntools-input-caret-color: #0328ff;
+        --ntools-input-placeholder: #b2b2b2;
+        --ntools-data-list-border: rgb(243, 243, 243);
+        --ntools-data-list-enter-color: #656565;
+        --ntools-kbd-enter: #0328ff;
+        --ntools-item-active-background: rgb(238 243 247);
+        --ntools-item-active-border: #0328ff;
+        --ntools-data-list-title: #393941;
+        --ntools-data-list-desc: #98999c;
+        --ntools-footer: #e9eaf0;
+        --ntools-kbd-background: rgb(31, 31, 33);
+        --ntools-kbd-color: rgb(255, 255, 255);
+        --ntools-footer-left: #414141;
+        --ntools-footer-right: #414141;
+    }
+}
+
+.ntools-model {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 999999;
+    display: none;
+}
+
+.ntools-model .ntools-tips {
+    margin-top: 99px;
+    background: #f6ffed;
+    width: 500px;
+    margin: auto;
+    margin-top: 99px;
+    border: 1px solid #b7eb8f;
+    box-sizing: border-box;
+    color: #000000d9;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    padding: 8px 15px;
+    word-wrap: break-word;
+    border-radius: 2px;
+    display: none;
+}
+
+.ntools-show {
+    display: block;
+}
+
+.ntools-model .ntools-wrap {
+    position: fixed;
+    background: var(--background);
+    width: 700px;
+    height: 496px;
+    top: 50%;
+    left: 50%;
+    margin-top: -280px;
+    margin-left: -350px;
+    border-radius: 10px;
+}
+
+.ntools-model .ntools-wrap .ntools-so .ntools-input:focus-visible {
+    outline: none;
+}
+
+.ntools-model .ntools-wrap .ntools-so .ntools-input {
+    border: 0px;
+    border-bottom: 1px solid var(--ntools-input-border);
+    width: 100%;
+    height: 50px;
+    border-top-left-radius: 6.5px;
+    border-top-right-radius: 6.5px;
+    background: inherit;
+    font-size: 18px;
+    width: 97%;
+    margin: auto;
+    color: var(--ntools-input-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    caret-color: var(--ntools-input-caret-color);
+}
+
+.ntools-model .ntools-wrap .ntools-so .ntools-input::placeholder {
+    color: var(--ntools-input-placeholder);
+}
+
+.ntools-model .ntools-wrap .ntools-so .ntools-logo {
+    position: absolute;
+    width: 35px;
+    top: 7px;
+    right: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 1px solid var(--ntools-logo);
+}
+
+.ntools-model .ntools-wrap .ntools-so .ntools-logo:hover {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+}
+
+.ntools-model .ntools-wrap .ntools-result {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.ntools-model .ntools-wrap .ntools-result .ntools-data-list {
+    cursor: pointer;
+    text-align: left;
+    height: initial;
+    border-bottom: 1px solid var(--ntools-data-list-border);
+    padding: 15px 15px;
+}
+
+.ntools-model .ntools-wrap .ntools-result .ntools-item-active {
+    background: var(--ntools-item-active-background);
+    /* border-left: 0px solid var(--ntools-item-active-border) */
+}
+
+.ntools-model .ntools-wrap .ntools-result .ntools-item-active .ntools-data-list-enter {
+    display: inline-grid;
+}
+
+.ntools-model .ntools-data-list-enter {
+    font-size: 12px;
+    color: var(--ntools-data-list-enter-color);
+    margin-top: 5px;
+    text-align: right;
+    display: inline-grid;
+    width: 100px;
+}
+
+.ntools-model .ntools-kbd-enter {
+    color: var(--ntools-kbd-enter);
+}
+
+.ntools-data-list-content {
+    margin-left: 10px;
+    display: inline-grid;
+}
+
+.ntools-model .ntools-wrap .ntools-result .ntools-data-list-icon {
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+    vertical-align: top;
+    display: inline-grid;
+}
+
+.ntools-model .ntools-wrap .ntools-result .ntools-data-list-icon img {
+    height: 25px;
+    width: 25px;
+    margin-top: 8px;
+}
+
+.ntools-model .ntools-wrap .ntools-result .ntools-data-list-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ntools-data-list-title);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+    margin-right: 10px;
+}
+
+.ntools-model .ntools-wrap .ntools-result .ntools-data-list-desc {
+    font-size: 12px;
+    color: var(--ntools-data-list-desc);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.ntools-model .ntools-wrap .ntools-footer {
+    border-top: 1px solid var(--ntools-footer);
+    height: 45px;
+    line-height: 45px;
+    width: 97%;
+    margin: auto;
+}
+
+.ntools-model .ntools-wrap .ntools-kbd {
+    color: var(--ntools-kbd-color);
+    width: 20px;
+    height: 20px;
+    display: block;
+    line-height: 20px;
+    text-align: center;
+    float: left;
+    margin-right: 3px;
+    margin-top: 13px;
+    background: var(--ntools-kbd-background);
+    border-radius: 5px;
+}
+
+.ntools-model .ntools-wrap .ntools-footer .ntools-footer-left {
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ntools-footer-left);
+}
+
+.ntools-model .ntools-wrap .ntools-footer .ntools-footer-right {
+    float: right;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ntools-footer-right);
+}

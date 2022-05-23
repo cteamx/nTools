@@ -1,0 +1,75 @@
+{
+    "name": "nTools 效率工具箱",
+    "author": "SanJin",
+    "description": "这是一款浏览器上的多功能效率工具",
+    "homepage_url": "https://n.tools",
+    "version": "0.1",
+    "manifest_version": 3,
+    "offline_enabled": true,
+    "action": {
+        "icons": {
+            "16": "/images/icons/16.png",
+            "32": "/images/icons/32.png",
+            "48": "/images/icons/48.png",
+            "128": "/images/icons/128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/icons/16.png",
+        "32": "/images/icons/32.png",
+        "48": "/images/icons/48.png",
+        "128": "/images/icons/128.png"
+    },
+    "background": {
+        "service_worker": "/js/background.js",
+        "type": "module"
+    },
+    "permissions": [
+        "tabs",
+        "bookmarks",
+        "browsingData",
+        "history",
+        "search",
+        "commands",
+        "topSites"
+    ],
+    "options_page": "options.html",
+    "commands": {
+        "open_main": {
+            "suggested_key": {
+                "default": "Alt+Z",
+                "mac": "Alt+Z"
+            },
+            "description": "Show nTools Window."
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_end",
+            "js": [
+                "/js/utils/fuse.min.js",
+                "/js/utils/jquery.min.js",
+                "/js/hello.js"
+            ],
+            "css": [
+                "/css/style.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "hello.html",
+                "/js/*",
+                "/css/*",
+                "/images/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
